@@ -5,7 +5,7 @@ docker pull alpine
 ```
 ### 
 ```
-docker images -it alpine
+docker images alpine
 ```
 ## 2. Crea un contenedor sin ponerle nombre. ¿está arrancado? Obtén el nombre
 ```
@@ -42,4 +42,22 @@ ip addr
 ### Para hacer un ping a google.com hacemos
 ```
 ping google.com
+```
+## 5. Crea un contenedor con el nombre 'dam_alp2'. ¿Puedes hacer ping entre los contenedores?
+```
+docker run -it --name dam_alp2 alpine
+```
+### Nos aseguramos de que tenemos los dos contenedores arrancados
+```
+docker start dam_alp1
+docker start dam_alp2
+```
+### Necesitamos la ip de uno de los contenedores
+```
+docker inspect dam_alp2 | grep IPAddress
+```
+### Ahora entramos en el otro contenedor para hacer ping con la ip
+```
+docker exec -it dam_alp1 /bin/sh
+ping 172.17.0.3(En mi caso)
 ```
