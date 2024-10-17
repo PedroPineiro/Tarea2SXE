@@ -29,3 +29,17 @@ docker start dam_alp1
 ```
 docker exec -it dam_alp1 /bin/sh
 ```
+## 4. Comprueba que ip tiene y si puedes hacer un ping a google.com
+### Primero tenemos que acceder a él de la misma forma que antes si es que no estamos ya dentro
+```
+docker start dam_alp1
+docker exec -it dam_alp1 /bin/sh
+```
+### Para comprobar la ip hacemos
+```
+ip addr
+```
+### Para hacer un ping a google.com hacemos
+```
+ping google.com
+```
