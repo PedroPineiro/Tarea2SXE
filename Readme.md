@@ -61,3 +61,10 @@ docker inspect dam_alp2 | grep IPAddress
 docker exec -it dam_alp1 /bin/sh
 ping 172.17.0.3(En mi caso)
 ```
+## 6.  Sal del terminal, ¿que ocurrió con el contenedor?
+
+```
+exit
+docker ps -a
+```
+### Los contenedores siguen en ejecución debido a que los creamos en modo interactivo (-it)
