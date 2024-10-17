@@ -8,7 +8,6 @@ docker pull alpine
 docker images -it alpine
 ```
 ## 2. Crea un contenedor sin ponerle nombre. ¿está arrancado? Obtén el nombre
-
 ```
 docker run -it alpine
 ```
@@ -18,3 +17,15 @@ docker run -it alpine
 docker ps -a
 ```
 ### El Container ID es 611d22ff7d90, y el nombre es affectionate_turing, ya que pone este nombre aleatorio por defecto
+## 3. Crea un contenedor con el nombre 'dam_alp1'. ¿Cómo puedes acceder a él?
+```
+docker run -it --name dam_alp1 alpine
+```
+### Para acceder a él, primero tenemos que ejecutar el contenedor
+```
+docker start dam_alp1
+```
+### Seguidamente acceder con
+```
+docker exec -it dam_alp1 /bin/sh
+```
