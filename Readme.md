@@ -68,3 +68,7 @@ exit
 docker ps -a
 ```
 ### Los contenedores siguen en ejecución debido a que los creamos en modo interactivo (-it)
+## 7.  ¿Cuanta memoria en el disco duro ocupaste?
+```
+docker system df
+```
