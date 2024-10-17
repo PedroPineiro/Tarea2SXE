@@ -1,9 +1,9 @@
-# Tarea 2 SXE
+# Tarea 2 SXE -- Pedro Piñeiro
 ## 1. Descarga la imagen "alpine" SIN ARRANCARLA y comprueba que está en tu equipo
 ```
 docker pull alpine
 ```
-### 
+### Para comprobar que está en nuestro equipo usamos
 ```
 docker images alpine
 ```
@@ -71,4 +71,8 @@ docker ps -a
 ## 7.  ¿Cuanta memoria en el disco duro ocupaste?
 ```
 docker system df
+```
+## 8.  ¿Cuanta RAM ocupan los contenedores? ¿Hay algún comando docker para saber esto?
+```
+docker stats
 ```
